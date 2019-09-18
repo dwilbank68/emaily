@@ -9,6 +9,7 @@ const User = mongoose.model('users');
 // with the same name would be loaded 
 
 const strategyObj = {
+    proxy: true,
     clientID: keys.googleClientID,
     clientSecret: keys.googleClientSecret,
     callbackURL: '/auth/google/callback'
