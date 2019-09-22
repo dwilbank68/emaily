@@ -15,25 +15,15 @@ const strategyObj = {
     callbackURL: '/auth/google/callback'
 };
 
-const OAuthCallback = (accessToken, refreshToken, profile, done) => {
+const OAuthCallback = async (accessToken, refreshToken, profile, done) => {
     // this is called by passport when google sends back the
     // final token(s) and user profile
-    User
-        .findOne({googleId: profile.id})
-        .then(usr => {
-            if (usr) {
-                done(null, usr);
-                // serializeUser called with usr
-            } else {
-                new User({googleId:profile.id})
-                .save()
-                .then(usr => done(null, usr));
-                // serializeUser called with usr
-            }
-        })
-
-    console.log('saved');
-    
+    const existingUser = await User.findOne({googleId: profile.id});
+    if (existingUser) return done(null, existingUser);
+        // serializeUser called with existingUser
+    const user = await new User({googleId:profile.id}).save()
+    done(null, user);
+        // serializeUser called with user
 }
 
 passport.serializeUser((user, done) => {

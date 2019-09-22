@@ -5,25 +5,26 @@ const passport = require('passport');
 
 module.exports = (app) => {
     app.get(
-        // when user tries to sign in, this route tells
-        // server to contact google for the first time
+        // 1. when user tries to sign in, this route tells
+        // passport to contact google for the first time
         '/auth/google',
         passport.authenticate('google', {scope:['profile','email']})
     )
 
     app.get(
-        // google will respond by calling this route and sending it a user code
+        // 2. google will respond by calling this route and sending it a user code
         // passport will send code back to google, google will
         // send back accessToken to the 2nd arg of GoogleStrategy
         '/auth/google/callback',
-        passport.authenticate('google')
+        passport.authenticate('google'),
+        (req, res) => {res.redirect('/surveys')}
     )
 
     app.get(
         '/api/logout',
         (req, res) => {
             req.logout();
-            res.send(req.user);
+            res.redirect('/');
         }
         // wipes the cookie
     )
