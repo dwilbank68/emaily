@@ -4,4 +4,3 @@
 /config/dev.js
 client/node_modules
 client/.env.development
-client/.env.production
