@@ -2,6 +2,8 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cookieSession = require('cookie-session');
 const passport = require('passport');
+const bodyParser = require('body-parser');
+
 require('./models/User.js');
 require('./services/passport.js');
 const keys = require('./config/keys.js')
@@ -21,8 +23,22 @@ app.use(
 )
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(bodyParser.json());
+
 // send the express app object to the authRoutes file
 require('./routes/authRoutes.js')(app);
+require('./routes/billingRoutes.js')(app);
+
+if (process.env.NODE_ENV === 'production') {
+    // if req comes in without recognizable route,
+    // like for a js file...
+    app.use(express.static('client/build'));
+    // then if req doesn't match anything in client/build
+    const path = require('path');
+    app.get('*', (req,res) => {
+        res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+    })
+}
 
 const PORT = process.env.PORT || 5000;
 

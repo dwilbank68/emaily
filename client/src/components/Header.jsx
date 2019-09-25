@@ -1,22 +1,26 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
-// import Header from './Header.jsx';
+
+import Payments from './Payments.jsx';
 // const Header = (props) => {
 const Header = ({auth}) => {
 
 
     const renderContent = () => {
-        console.log('---------------------');
-        console.log("auth", auth);
-        console.log('---------------------');
         if (auth === null) return;
         if (auth === false) return (
             <li>
                 <a href="/auth/google">Log In With Google</a>
             </li>
         );
-        return (<li><a href="/api/logout">Log Out</a></li>);
+        return [
+            <li key="1"><Payments/></li>,
+            <li key="2" style={{margin: '0 10px'}}>
+                Credits: {auth.credits}
+            </li>,
+            <li key="3"><a href="/api/logout">Log Out</a></li>
+        ];
     }
 
     return (

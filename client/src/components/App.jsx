@@ -9,9 +9,6 @@ import Landing from './Landing.jsx';
 // import './App.css';
 
 function App({fetchUser}) {
-    console.log('---------------------');
-    console.log("landing", Landing);
-    console.log('---------------------');
 	useEffect(
         () => {fetchUser()},
         []
