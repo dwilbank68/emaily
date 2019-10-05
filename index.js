@@ -4,11 +4,12 @@ const cookieSession = require('cookie-session');
 const passport = require('passport');
 const bodyParser = require('body-parser');
 
+require('./models/Survey.js');
 require('./models/User.js');
 require('./services/passport.js');
 const keys = require('./config/keys.js')
 
-mongoose.connect(keys.mongoURI, { useNewUrlParser: true });
+mongoose.connect(keys.mongoURI, { useNewUrlParser: true, useUnifiedTopology: true });
 
 const app = express();
 app.use(
@@ -28,6 +29,7 @@ app.use(bodyParser.json());
 // send the express app object to the authRoutes file
 require('./routes/authRoutes.js')(app);
 require('./routes/billingRoutes.js')(app);
+require('./routes/surveyRoutes.js')(app);
 
 if (process.env.NODE_ENV === 'production') {
     // if req comes in without recognizable route,

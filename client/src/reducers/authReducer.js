@@ -1,4 +1,3 @@
-import _ from 'lodash';
 import {FETCH_USER} from '../actions/types.js';
 	
 let INITIAL_STATE = null;
