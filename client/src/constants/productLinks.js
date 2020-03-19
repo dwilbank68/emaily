@@ -1,6 +1,6 @@
 import p01AE from '../components/surveys/images/p01AE.jpg';
-import p026E from '../components/surveys/images/p026E.jpg';
 import p026G from '../components/surveys/images/p026G.jpg';
+import p026G_31 from '../components/surveys/images/p026G_31.jpg';
 import p02HY from '../components/surveys/images/p02HY.jpg';
 import p03BJ from '../components/surveys/images/p03BJ.jpg';
 import p08HX from '../components/surveys/images/p08HX.jpg';
@@ -24,7 +24,7 @@ export default {
         image: p02HY,
         name: 'High Visibility Class 2 T-Shirt - Short Sleeved',
         color: '#feffde',
-        points: 20,
+        points: 23,
         sizes: {
             '02HY_S':     'https://companystore.unifirst.com/sf/WWL-Employees/Shirts/p/02HYHT145?categoryCodeForProdPrs=22-1-1',
             '02HY_M':     'https://companystore.unifirst.com/sf/WWL-Employees/Shirts/p/02HYHT155?categoryCodeForProdPrs=22-1-1',
@@ -42,7 +42,7 @@ export default {
         image: p08HX,
         name:'High Visibility Class 3 T-Shirt - Long Sleeved',
         color:'#feffde',
-        points: 31,
+        points: 33,
         sizes: {
             '08HX_S':   'https://companystore.unifirst.com/sf/WWL-Employees/Shirts/p/08HXHT145?categoryCodeForProdPrs=22-1-1',
             '08HX_M':   'https://companystore.unifirst.com/sf/WWL-Employees/Shirts/p/08HXHT155?categoryCodeForProdPrs=22-1-1',
@@ -59,7 +59,7 @@ export default {
         code: '026G',
         image: p026G,
         name:'Gildan Ultra-Cotton T-Shirt - Short Sleeved',
-        points: 3,
+        points: 5,
         sizes: {
             '026G_S':   'https://companystore.unifirst.com/sf/WWL-Employees/Shirts/p/026G31145?categoryCodeForProdPrs=22-1-1',
             '026G_M':   'https://companystore.unifirst.com/sf/WWL-Employees/Shirts/p/026G31155?categoryCodeForProdPrs=22-1-1',
@@ -71,9 +71,9 @@ export default {
             '026G_5XL': 'https://companystore.unifirst.com/sf/WWL-Employees/Shirts/p/026G31215?categoryCodeForProdPrs=22-1-1',
         }
     },
-    '026E':{
-        code: '026E',
-        image: p026E,
+    '026G-31':{
+        code: '026G-31',
+        image: p026G_31,
         name:'Gildan Ultra-Cotton T-Shirt - Short Sleeved with Pocket',
         points: 5,
         sizes: {
@@ -91,7 +91,7 @@ export default {
         code: '03BJ',
         image: p03BJ,
         name:'Gildan Ultra-Cotton T-Shirt - Long Sleeved',
-        points: 6,
+        points: 8,
         sizes: {
             '03BJ_S':    'https://companystore.unifirst.com/sf/c/p/03BJ31145?categoryCodeForProdPrs=22-1-1',
             '03BJ_M':    'https://companystore.unifirst.com/sf/c/p/03BJ31155?categoryCodeForProdPrs=22-1-1',
@@ -107,8 +107,7 @@ export default {
         code: '01AE',
         image: p01AE,
         name:'Jerzees Nu Blend Crewneck Sweatshirt',
-        points: 9,
-        // image:'https://companystore.unifirst.com/images/products//1000x1200/01AE-31.jpg?lang=en',
+        points: 11,
         sizes: {
             '01AE_S':    'https://companystore.unifirst.com/sf/c/p/01AE31145?categoryCodeForProdPrs=',
             '01AE_M':    'https://companystore.unifirst.com/sf/c/p/01AE31155?categoryCodeForProdPrs=',
@@ -124,7 +123,6 @@ export default {
         name:"Ladies' Utility Cargo Chino Shorts",
         points: 16,
         image: p11CL,
-        // image:'https://companystore.unifirst.com/images/products//1000x1200/11CL-12.jpg?lang=en',
         color: '#fff2fb',
         sizes: {
             '11CL_00':    'https://companystore.unifirst.com/sf/WWL-Employees/Pants/p/11CL12000?categoryCodeForProdPrs=22-1-2',
@@ -149,7 +147,6 @@ export default {
         image: p10A4,
         name:"Women's Cargo Pants",
         points: 21,
-        // image:'https://companystore.unifirst.com/images/products//1000x1200/10A4-12.jpg?lang=en',
         color: '#fff2fb',
         sizes: { 
             '10A4_02-27': 'https://companystore.unifirst.com/sf/c/p/10A41202027?categoryCodeForProdPrs=22-1-2',
@@ -283,9 +280,8 @@ export default {
     '12CK':{
         code: '12CK',
         name:"Men's Utility Cargo Shorts",
-        // image:'https://companystore.unifirst.com/images/products//1000x1200/12CK-12.jpg?lang=en',
         image: p12CK,
-        points: 15,
+        points: 16,
         sizes: { 
             '12CK_28': 'https://companystore.unifirst.com/sf/WWL-Employees/Pants/p/12CK12280?categoryCodeForProdPrs=22-1-2',
             '12CK_30': 'https://companystore.unifirst.com/sf/WWL-Employees/Pants/p/12CK12300?categoryCodeForProdPrs=22-1-2',
@@ -308,7 +304,6 @@ export default {
         image: p12AA,
         name:"Men's Cargo Pants",
         points: 21,
-        // image:'https://companystore.unifirst.com/images/products//1000x1200/12AA-12.jpg?lang=en',
         sizes: { 
             '12AA_28-28': 'https://companystore.unifirst.com/sf/c/p/12AA1228028?categoryCodeForProdPrs=22-1-2',
             '12AA_28-29': 'https://companystore.unifirst.com/sf/c/p/12AA1228029?categoryCodeForProdPrs=22-1-2',
@@ -441,10 +436,9 @@ export default {
     '15DL':{
         code: '15DL',
         image: p15DL,
-        // image: 'https://companystore.unifirst.com/images/products//1000x1200/15DL-HT.jpg?lang=en',
         name: 'Class 3 Rain Jacket',
         color: '#feffde',
-        points: 42,
+        points: 43,
         sizes: {
             '15DL_S':     'https://companystore.unifirst.com/sf/WWL-Employees/Accessories/p/15DLHT370?categoryCodeForProdPrs=22-1-4',
             '15DL_M':     'https://companystore.unifirst.com/sf/WWL-Employees/Accessories/p/15DLHT390?categoryCodeForProdPrs=22-1-4',
@@ -458,7 +452,6 @@ export default {
     '10DL':{
         code: '10DL',
         image: p10DL,
-        // image: 'https://companystore.unifirst.com/images/products//1000x1200/10DL-GC.jpg?lang=en',
         name: 'Class E Rain Pants',
         points: 19,
         color: '#feffde',
@@ -475,9 +468,8 @@ export default {
     '18DH':{
         code: '18DH',
         image: p18DH,
-        // image: 'https://companystore.unifirst.com/images/products//1000x1200/18DH-B6.jpg?lang=en',
         name: 'Class 3 Hi-Vis Bomber With Black Bottom',
-        points: 19,
+        points: 30,
         color: '#feffde',
         sizes: {
             '18DH_M':     'https://companystore.unifirst.com/sf/WWL-Employees/Outerwear/p/18DHB6420?categoryCodeForProdPrs=22-1-3',
@@ -492,7 +484,6 @@ export default {
     '9918':{
         code: '9918',
         image: p9918,
-        // image: 'https://companystore.unifirst.com/images/products//1000x1200/9918-12.jpg?lang=en',
         name: 'Scratchless Uniform Belt',
         points: 11,
         sizes: {
@@ -508,9 +499,8 @@ export default {
         code: '90DM',
         color: '#feffde',
         image: p90DM,
-        // image: 'https://companystore.unifirst.com/images/products//1000x1200/90DM-HT.jpg?lang=en',
         name: 'High Visibility Cap',
-        points: 4,
+        points: 5,
         sizes: {
             '90DM_Uni-Fit': 'https://companystore.unifirst.com/sf/WWL-Employees/Accessories/p/90DMHT?categoryCodeForProdPrs=22-1-4'
         }
@@ -518,7 +508,6 @@ export default {
     '90BG':{
         code: '90BG',
         image: p90BG,
-        // image: 'https://companystore.unifirst.com/images/products//1000x1200/90BG-12.jpg?lang=en',
         name: 'Mesh Snap Back Cap',
         points: 4,
         sizes: {
@@ -529,9 +518,8 @@ export default {
         code: '90DB',
         color: '#feffde',
         image: p90DB,
-        // image: 'https://companystore.unifirst.com/images/products//1000x1200/90DB-HT.jpg?lang=en',
         name: 'Enhanced Visibility Knit Cap',
-        points: 7,
+        points: 8,
         sizes: {
             '90DB_Uni-Fit': 'https://companystore.unifirst.com/sf/WWL-Employees/Accessories/p/90DBHT?categoryCodeForProdPrs=22-1-4'
         }
@@ -539,7 +527,6 @@ export default {
     '90BW':{
         code: '90BW',
         image: p90BW,
-        // image: 'https://companystore.unifirst.com/images/products//1000x1200/90BW-12.jpg?lang=en',
         name: 'Knit Beanie With Stripes',
         points: 3,
         sizes: {
@@ -549,7 +536,6 @@ export default {
     '90CL':{
         code: '90CL',
         image: p90CL,
-        // image: 'https://companystore.unifirst.com/images/products//1000x1200/90CL-IS.jpg?lang=en',
         name: 'Outback Hat',
         points: 8,
         sizes: {
